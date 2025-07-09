@@ -6,7 +6,7 @@ metadata:
 spec:
   type: team
   profile:
-    displayName: meeran
+    displayName: sysco
     owner: meeran
     email: infrastructure@example.com
     picture: https://example.com/groups/bu-infrastructure.jpeg
