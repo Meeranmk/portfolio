@@ -1,16 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: portfolio
-  description: The place to be, for great artists
+    name: portfolio
+    description: This is my portfolio
+    annotations:
+        backstage.io/techdocs-ref: dir:.
+        github.com/project-slug: pep8speaks-org/pep8speaks
+    tags:
+        - javascript
+    links:
+        - url: https://admin.example-org.com
+          title: Admin Dashboard
+          icon: dashboard
+          type: admin-dashboard
 spec:
-  type: website
-  lifecycle: development
-  owner: meeran
-  system: artist-engagement-portal
-  dependsOn:
-    - resource:default/artists-db
-  dependencyOf:
-    - component:default/artist-web-lookup
-  providesApis:
-    - artist-api
+    type: service
+    lifecycle: development
+    owner: meeran
+    system: project-x
