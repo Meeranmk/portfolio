@@ -5,7 +5,7 @@ metadata:
     description: Sysco Corporation (SYY) is the world's largest broadline food distributor
     annotations:
         backstage.io/techdocs-ref: dir:.
-        github.com/project-slug: Meeranmk/ResumeBuilder
+        github.com/project-slug: kezri29/Java-Practice
     tags:
         - javascript
     links:
