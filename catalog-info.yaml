@@ -1,21 +1,79 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-    name: sysco
-    description: Sysco Corporation (SYY) is the world's largest broadline food distributor
-    annotations:
-        backstage.io/techdocs-ref: dir:.
-        github.com/project-slug: Meeranmk/ResumeBuilder
-    tags:
-        - javascript
-    links:
-        - url: https://admin.example-org.com
-          title: Admin Dashboard
-          icon: dashboard
-          type: admin-dashboard
+  name: sysco
+  description: Sysco Corporation (SYY) is the world's largest broadline food distributor
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: Meeranmk/ResumeBuilder
+  tags:
+    - javascript
+  links:
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
 spec:
-    type: service
-    lifecycle: development
-    owner: prodapt
-    system: project-x
+  type: service
+  lifecycle: development
+  owner: prodapt
+  system: project-x
+  dependsOn:
+    - component:core-auth-library
+    - component:core-logging-library
+  providesApi:
+    - sysco-api
+  consumesApi:
+    - inventory-api
 
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sysco-api
+  description: API for Sysco service
+spec:
+  type: openapi
+  lifecycle: development
+  owner: prodapt
+  system: project-x
+  definition:
+    $text: ./openapi/sysco-api.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core-auth-library
+  description: Core authentication library used across services
+spec:
+  type: library
+  lifecycle: production
+  owner: prodapt
+  system: project-x
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: core-logging-library
+  description: Core logging library for centralized logging
+spec:
+  type: library
+  lifecycle: production
+  owner: prodapt
+  system: project-x
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: inventory-api
+  description: Inventory management API consumed by Sysco
+spec:
+  type: openapi
+  lifecycle: production
+  owner: prodapt
+  system: project-x
+  definition:
+    $text: ./openapi/inventory-api.yaml
