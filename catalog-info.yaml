@@ -19,6 +19,3 @@ spec:
     owner: prodapt
     system: project-x
 
- dependsOn:
-  - component:core-queuing-library
-  - component:core-auth-module
