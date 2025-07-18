@@ -4,6 +4,8 @@ metadata:
   name: sysco
   description: Sysco Corporation (SYY) is the world's largest broadline food distributor
   annotations:
+    datadoghq.com/site: datadoghq.com 
+    datadoghq.com/dashboard-url: https://us5.datadoghq.com/dashboard/rec-2xm-dxm/host-counts-cloned?fromUser=false&refresh_mode=sliding&from_ts=1752820255183&to_ts=1752823855183&live=true
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: pep8speaks-org/pep8speaks
   tags:
