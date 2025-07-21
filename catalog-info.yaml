@@ -6,6 +6,8 @@ metadata:
   annotations:
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: Meeranmk/portfolio
+    snyk.io/project-ids: 5a62ed2c-8f27-4625-a99d-2a336c4e9008
+    snyk.io/org-id: a1d16401-496b-4613-acc4-6fbe0e76ed8c
   tags:
     - javascript
   links:
