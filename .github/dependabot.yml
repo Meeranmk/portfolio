@@ -1,7 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # or "maven", "pip", "gradle", etc.
-    directory: "/"           # Location of your manifest file (e.g., package.json)
+  - package-ecosystem: "npm"
+    directory: "/"                # Location of package.json / yarn.lock
     schedule:
-      interval: "daily"      # "weekly", "monthly", etc.
-    open-pull-requests-limit: 5
+      interval: "weekly"          # Can be "daily", "weekly", or "monthly"
+    open-pull-requests-limit: 10
+    rebase-strategy: "auto"
+    ignore:
+      - dependency-name: "react"
+        versions: ["17.x"]
+
+  # Optional: For GitHub Actions (if you're using them)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
