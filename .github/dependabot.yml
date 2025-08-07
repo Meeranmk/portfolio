@@ -1,0 +1,7 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # or "maven", "pip", "gradle", etc.
+    directory: "/"           # Location of your manifest file (e.g., package.json)
+    schedule:
+      interval: "daily"      # "weekly", "monthly", etc.
+    open-pull-requests-limit: 5
