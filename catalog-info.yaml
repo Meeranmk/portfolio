@@ -7,7 +7,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     github.com/project-slug: Meeranmk/portfolio
     snyk.io/org-id: a1d16401-496b-4613-acc4-6fbe0e76ed8c
-    sonarqube.org/project-key: sonarcloud.io/Meeranmk_portfolio 
+    sonarcloud.io/project-key: Meeranmk_react-admin-dashboard 
     
   tags:
     - javascript
